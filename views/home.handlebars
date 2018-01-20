@@ -1,0 +1,73 @@
+<div id="page" style="position: relative;">
+        {{> home/components/header}}
+        <div id="main">
+
+            {{> home/components/tags}}
+
+            <div id="home-tabs" class="xv-tabs not-logged">
+                <ul class="tab-buttons">
+                    <li><a class="btn btn-default home active"> HOME</a></li>
+                    <li><a class="btn btn-default mysubs" href="#" title="My subscriptions"><span class="label"> My subscriptions</span></a></li>
+                    <li><a class="btn btn-default videosilike" href="#" title="Videos I like"><span class="label"> Videos I like</span></a></li>
+                </ul>
+                <div class="stripe"><span class="pull-right"><a href="#">40 videos &gt;</a></span></div>
+            </div>
+            <div id="content">
+                <div class="mozaique thumbs-4">
+
+                    {{#each docs}}
+
+
+                    <div class="thumb-block ">
+                        <div class="thumb-inside">
+                            <div class="thumb">
+                                <a href="">
+                                    <img src="{{this.thumbnail}}">
+                                </a>
+                            </div>
+                            <span class="video-hd-mark">HD</span>
+                        </div>
+                        <p><a href="#">{{this.title}}</a></p>
+                        <p class="metadata">
+                            <span class="bg">
+                                <strong>2 min</strong> -
+                                <span class="mobile-hide">83% - </span>
+                            <a href="{{this.channel_link}}">{{this.channel_name}}</a>
+                            </span>
+                        </p>
+                    </div>
+
+
+                    {{/each}}
+
+                </div>
+                <!-- <div class="pagination ">
+                    <ul>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">8</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
+                        <li><a href="#">11</a></li>
+                        <li><a href="#">12</a></li>
+                        <li><a href="#">13</a></li>
+                        <li><a href="#">14</a></li>
+                        <li><a href="#">15</a></li>
+                        <li><a href="#">16</a></li>
+                        <li><a href="#">17</a></li>
+                        <li><a href="#">18</a></li>
+                        <li><a href="#">19</a></li>
+                        <li><a href="#">20</a></li>
+                        <li><a href="#">21</a></li>
+                        <li><a href="#" class="no-page">Next</a></li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+        {{> home/components/footer}}
+    </div>
+    <div id="mobile-login-menu" class="mobile-show hidden" style="top: 32px;"><a href="#" class="btn btn-default menu-login-acct">Log in / Create account</a><a href="#" class="btn btn-default my-subs-nav-link">My subscriptions</a><a href="#" class="btn btn-default">Videos I like</a></div>
