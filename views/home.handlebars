@@ -10,18 +10,17 @@
                     <li><a class="btn btn-default mysubs" href="#" title="My subscriptions"><span class="label"> My subscriptions</span></a></li>
                     <li><a class="btn btn-default videosilike" href="#" title="Videos I like"><span class="label"> Videos I like</span></a></li>
                 </ul>
-                <div class="stripe"><span class="pull-right"><a href="#">40 videos &gt;</a></span></div>
+                <div class="stripe"><span class="pull-right"><a href="?page={{inc page}}">40 videos &gt;</a></span></div>
             </div>
             <div id="content">
                 <div class="mozaique thumbs-4">
 
                     {{#each docs}}
 
-
                     <div class="thumb-block ">
                         <div class="thumb-inside">
                             <div class="thumb">
-                                <a href="">
+                                <a href="{{this.link}}">
                                     <img src="{{this.thumbnail}}">
                                 </a>
                             </div>
