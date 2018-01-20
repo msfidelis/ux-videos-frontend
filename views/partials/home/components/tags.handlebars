@@ -2,41 +2,9 @@
     <div class="main-categories">
         <ul>
             <li class="mobile-hide"><a class="btn btn-default label">Categories</a></li>
-            <li><a href="#" class="btn btn-default">UX Design in English</a> </li>
-            <li><a href="#" class="btn btn-default">Mockups</a></li>
-            <li><a href="#" class="btn btn-default">Sketch</a></li>
-            <li><a href="#" class="btn btn-default">Brainstorming</a></li>
-            <li><a href="#" class="btn btn-default">Canvas</a></li>
-            <li><a href="#" class="btn btn-default">MVP</a></li>
-            <li><a href="#" class="btn btn-default">Figma</a></li>
-            <li><a href="#" class="btn btn-default">Interview</a></li>
-            <li><a href="#" class="btn btn-default">Development</a></li>
-            <li><a href="#" class="btn btn-default">Visual Design</a></li>
-            <li><a href="#" class="btn btn-default">Paper prototypes</a></li>
-            <li><a href="#" class="btn btn-default">Card sorting</a></li>
-            <li><a href="#" class="btn btn-default">Customer success</a></li>
-            <li><a href="#" class="btn btn-default">Locked layers</a></li>
-            <li><a href="#" class="btn btn-default">ROI</a></li>
-            <li><a href="#" class="btn btn-default">Flat Design</a></li>
-            <li><a href="#" class="btn btn-default">Dribbble</a></li>
-            <li><a href="#" class="btn btn-default">Apple iOS</a></li>
-            <li><a href="#" class="btn btn-default">Mustaches</a></li>
-            <li><a href="#" class="btn btn-default"><span class="icon rainbow"></span> Diversity</a></li>
-            <li><a href="#" class="btn btn-default">Google Android</a></li>
-            <li><a href="#" class="btn btn-default">Virtual Reality</a></li>
-            <li><a href="#" class="btn btn-default">Augmented Reality</a></li>
-            <li><a href="#" class="btn btn-default">Meetups</a></li>
-            <li><a href="#" class="btn btn-default">Accessibility</a></li>
-            <li><a href="#" class="btn btn-default">Skeuomorphism</a></li>
-            <li><a href="#" class="btn btn-default">Adobe XD</a></li>
-            <li><a href="#" class="btn btn-default">User Journey</a></li>
-            <li><a href="#" class="btn btn-default">Value Proposition</a></li>
-            <li><a href="#" class="btn btn-default">Startups</a></li>
-            <li><a href="#" class="btn btn-default">Service Design</a></li>
-            <li><a href="#" class="btn btn-default">Product Design</a></li>
-            <li><a href="#" class="btn btn-default">Wireframing</a></li>
-            <li><a href="#" class="btn btn-default">Usability testing</a></li>
-            <li><a href="#" class="btn btn-default">Content Requirements</a></li>
+            {{#each tags}}
+                <li><a href="/?tag={{this.tag}}" class="btn btn-default">{{ this.tag }}</a> </li>
+            {{/each}}
             <li class="mobile-show"><a href="#tags" class="btn btn-default">+</a></li>
         </ul>
     </div>

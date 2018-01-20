@@ -6,6 +6,7 @@ const helpers = require('./lib/helpers');
 const exphbs = require('express-handlebars');
 const express = require('express');
 const path = require('path');
+const Promise = require('bluebird');
 const app = express();
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main', helpers: helpers }));
@@ -20,9 +21,16 @@ app.get('/', (req, res) => {
         page : req.query.page || 1
     };
 
-    api.paginate(query).then(data => {
-        console.log(query);
-        console.log(data);
+    if (req.query.tag) {
+        query.tags = req.query.tag;
+    }
+
+    Promise.all([
+        api.paginate(query),
+        api.listTags()
+    ]).then(results => {
+        const data = results[0];
+        data.tags = results[1];
         res.render('home', data);
     });
 
