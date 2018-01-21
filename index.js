@@ -1,5 +1,7 @@
 'use strict';
 
+const PORT = process.env.PORT || 4000;
+
 const api = require('./lib/api');
 const helpers = require('./lib/helpers');
 
@@ -36,4 +38,14 @@ app.get('/', (req, res) => {
 
 });
 
-app.listen(process.env.PORT || 4000);
+app.get('/login', (req, res) => {
+    res.render('login', {layout: 'login'});
+});
+
+app.get('/dashboard', (req, res) => {
+    res.render('dashboard', {layout: 'admin'});
+});
+
+app.listen(PORT, (err) => {
+    console.log(`UXVideos Front is running on port: ${PORT}`);
+});
