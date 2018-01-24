@@ -6,14 +6,15 @@ const api       = require('../lib/api');
 module.exports = (app) => {
 
     /**
-     * 
+     * Render Login Page
      */
     app.get('/login', (req, res) => {
         res.render('login', {layout: 'login'});
     });
 
     /**
-     * 
+     * Login Post - Comunicate with Backend API 
+     * to validate user credentials
      */
     app.post('/login', (req, res) => {
 
@@ -27,9 +28,8 @@ module.exports = (app) => {
 
     });
 
-
     /**
-     * 
+     * Logout action
      */
     app.get('/logout', function(req, res) {
         req.logout();
@@ -37,7 +37,7 @@ module.exports = (app) => {
     });
 
     /**
-     * 
+     * Render Dashboard
      */
     app.get('/dashboard', auth.isLoggedIn, (req, res) => {
         res.render('dashboard', {layout: 'admin'});
