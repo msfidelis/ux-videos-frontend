@@ -9,6 +9,7 @@ const express       = require('express');
 const path          = require('path');
 const Promise       = require('bluebird');
 const consign       = require('consign');
+const passport      = require('passport');
 
 const helpers = require('../lib/helpers');
 
@@ -28,10 +29,13 @@ module.exports = () => {
     app.use(session({
         //store: sessionStore,
         secret: 'fuckingdenis',
-        proxy: true,
+        proxy: false,
         resave: true,
         saveUninitialized: true
     }));
+
+    app.use(passport.initialize());
+    app.use(passport.session());
 
     consign()
         .include('routes')
