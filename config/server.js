@@ -24,6 +24,7 @@ module.exports = () => {
     app.engine('handlebars', exphbs({ defaultLayout: 'main', helpers: helpers }));
     app.use(express.static(path.join(__dirname, '../static')));
     app.set('view engine', 'handlebars');
+
     //app.enable('view cache');
     
     app.use(session({

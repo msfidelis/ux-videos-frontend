@@ -43,4 +43,26 @@ module.exports = (app) => {
         res.render('dashboard', {layout: 'admin'});
     });
 
+    /**
+     * Dasboard Videos
+     */
+    app.get('/dashboard/scrapy/videos', auth.isLoggedIn, (req, res) => {
+
+        api.getVideoScrapyList(req.session.user.token)
+            .then(videos => {
+                const data = {};
+                data.videos = videos;
+                console.log(data);
+                res.render('videos-scrapy-list', {layout: 'admin', data: data});
+            }); 
+
+    });
+
+    /**
+     * Dasboard Videos
+     */
+    app.get('/dashboard/videos', auth.isLoggedIn, (req, res) => {
+        res.render('videos-list', {layout: 'admin'});
+    });
+
 }
