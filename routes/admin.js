@@ -52,7 +52,6 @@ module.exports = (app) => {
             .then(videos => {
                 const data = {};
                 data.videos = videos;
-                console.log(data);
                 res.render('videos-scrapy-list', {layout: 'admin', data: data});
             }); 
 
