@@ -41,8 +41,8 @@ npm run seed
 * Clone this repository 
 
 ```bash
-git clone git@github.com:msfidelis/ux-videos-backend.git
-cd ux-videos-backend/
+git clone git@github.com:msfidelis/ux-videos-frontend.git
+cd ux-videos-frontend/
 ```
 
 * Install NPM dependencies
