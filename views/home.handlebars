@@ -5,12 +5,17 @@
             {{> home/components/tags}}
 
             <div id="home-tabs" class="xv-tabs not-logged">
+                
                 <ul class="tab-buttons">
                     <li><a class="btn btn-default home active" href="/"> HOME</a></li>
                     <li><a class="btn btn-default mysubs" href="#" title="My subscriptions"><span class="label"> My subscriptions</span></a></li>
                     <li><a class="btn btn-default videosilike" href="#" title="Videos I like"><span class="label"> Videos I like</span></a></li>
                 </ul>
-                <div class="stripe"><span class="pull-right"><a href="?page={{inc page}}">40 videos &gt;</a></span></div>
+
+                {{!-- {{#not_equals page pages}} --}}
+                    <div class="stripe"><span class="pull-right"><a href="?page={{inc page}}">40 videos &gt;</a></span></div>
+                {{!-- {{/not_equals}} --}}
+
             </div>
             <div id="content">
                 <div class="mozaique thumbs-4">
