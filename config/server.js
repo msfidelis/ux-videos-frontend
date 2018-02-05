@@ -10,6 +10,8 @@ const path          = require('path');
 const Promise       = require('bluebird');
 const consign       = require('consign');
 const passport      = require('passport');
+const cors	    = require('cors');
+const compression   = require("compression");
 
 const helpers = require('../lib/helpers');
 
@@ -17,7 +19,9 @@ module.exports = () => {
 
     const app = express();
 
+    app.use(cors());
     app.use(morgan('dev'));
+    app.use(compression());
     app.use(cookieParser());
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: true}));
