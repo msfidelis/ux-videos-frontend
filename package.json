@@ -1,39 +1,40 @@
 {
-  "name": "ux-videos-frontend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "axios": "^0.17.1",
-    "bluebird": "^3.5.1",
-    "body-parser": "^1.18.2",
-    "compression": "^1.7.1",
-    "connect-flash": "^0.1.1",
-    "consign": "^0.1.6",
-    "cookie-parser": "^1.4.3",
-    "cors": "^2.8.4",
-    "express": "^4.16.2",
-    "express-handlebars": "^3.0.0",
-    "express-session": "^1.15.6",
-    "morgan": "^1.9.0",
-    "passport": "^0.4.0"
-  },
-  "devDependencies": {
-    "nodemon": "^1.14.11"
-  },
-  "scripts": {
-    "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/msfidelis/ux-videos-frontend.git"
-  },
-  "keywords": [],
-  "author": "Matheus Fidelis <msfidelis01@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/msfidelis/ux-videos-frontend/issues"
-  },
-  "homepage": "https://github.com/msfidelis/ux-videos-frontend#readme"
+    "name": "ux-videos-frontend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "axios": "^0.17.1",
+        "bluebird": "^3.5.1",
+        "body-parser": "^1.18.2",
+        "compression": "^1.7.1",
+        "connect-flash": "^0.1.1",
+        "consign": "^0.1.6",
+        "cookie-parser": "^1.4.3",
+        "cors": "^2.8.4",
+        "express": "^4.16.2",
+        "express-handlebars": "^3.0.0",
+        "express-session": "^1.15.6",
+        "morgan": "^1.9.0",
+        "passport": "^0.4.0"
+    },
+    "devDependencies": {
+        "nodemon": "^1.14.11"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/msfidelis/ux-videos-frontend.git"
+    },
+    "keywords": [],
+    "author": "Matheus Fidelis <msfidelis01@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/msfidelis/ux-videos-frontend/issues"
+    },
+    "homepage": "https://github.com/msfidelis/ux-videos-frontend#readme"
 }
